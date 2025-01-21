@@ -1,0 +1,9 @@
+exclude:
+  - .prettierignore
+  - .gitignore
+  - .prettierrc
+  - LICENSE
+  - loancalc.png
+  - preview.png
+  - tech.png
+  - README.md

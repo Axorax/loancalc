@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./dep.css" />
+    <script src="./dep.js" defer></script>
+    <script src="./script.js" defer></script>
+    <title>Loancalc</title>
+    <link rel="shortcut icon" href="./loancalc.svg" />
+  </head>
+  <body>
+    <div class="overlay"></div>
+
+    <div class="fcc">
+      <main class="fcc">
+        <div class="wrapper">
+          <div class="left">
+            <div class="top box">
+              <div class="input-field">
+                <input id="money" type="text" class="validate" />
+                <label id="money-label" for="money">Money needed</label>
+              </div>
+              <p class="range-field">
+                <input type="range" id="money-range" min="1000" max="50000" step="1000" />
+              </p>
+              <div class="group">
+                <div>
+                  <div class="input-field">
+                    <input id="interest" type="text" class="validate" />
+                    <label id="interest-label" for="interest">Annual interest rate</label>
+                  </div>
+                  <p class="range-field">
+                    <input type="range" id="interest-range" min="0" max="100" />
+                  </p>
+                </div>
+                <div>
+                  <div class="input-field">
+                    <input id="months" type="text" class="validate" />
+                    <label id="months-label" for="months">Time in months</label>
+                  </div>
+                  <p class="range-field">
+                    <input type="range" id="months-range" min="1" max="100" />
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="bottom box">
+              <div class="waves-effect waves-teal" style="width: 100%; height: 100%; background: transparent">
+                <h2>Payment per month</h2>
+                <h1 id="perMonth">Waiting for input</h1>
+              </div>
+            </div>
+          </div>
+          <div class="right box fcc">
+            <div class="chart">
+              <div class="total">
+                <h2>Total</h2>
+                <h1 id="total">Waiting for input</h1>
+              </div>
+              <canvas id="doughnut"></canvas>
+            </div>
+            <div class="label-wrapper fcc">
+              <div class="label">
+                <div class="top">
+                  <div class="color" style="background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%)"></div>
+                  <p>Principal</p>
+                </div>
+                <div class="bottom" id="principalLabel"></div>
+              </div>
+              <div class="label">
+                <div class="top">
+                  <div class="color" style="background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%)"></div>
+                  <p>Interest</p>
+                </div>
+                <div class="bottom" id="interestLabel"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
